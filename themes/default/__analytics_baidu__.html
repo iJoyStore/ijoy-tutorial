@@ -1,0 +1,19 @@
+<!-- baidu analytics -->
+{% if site.integration.analytics.id %}
+<script>
+    var _hmt = _hmt || [];
+</script>
+<script async src="https://hm.baidu.com/hm.js?{{ site.integration.analytics.id }}"></script>
+{% else %}
+<!--
+ERROR: missing site.integration.analytics.id
+Example site.yml:
+
+site:
+  integration:
+    analytics:
+      provider: baidu
+      id: "a1b2...e8f9"
+-->
+{% endif %}
+<!--// baidu analytics -->

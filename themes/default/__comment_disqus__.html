@@ -1,0 +1,29 @@
+<!-- disqus comment -->
+{% if site.integration.comment.name %}
+<hr class="gsc-border mt-4">
+<div class="mb-4"></div>
+<div id="disqus_thread"></div>
+<script>
+    let disqus_pathname = function () {
+        let p = location.pathname;
+        if (p.endsWith('/')) {
+            p = p + 'index.html';
+        }
+        return p;
+    };
+    var disqus_config = function () {
+        let prefix = '{{ site.rootPath }}';
+        this.page.url = location.href.substring(prefix.length);
+        this.page.identifier = disqus_pathname();
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{{ site.integration.comment.name }}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+{% else %}
+<!-- ERROR: missing config: site.integration.comment.name -->
+{% endif %}
+<!--// disqus comment -->

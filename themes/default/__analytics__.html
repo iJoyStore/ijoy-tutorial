@@ -1,0 +1,3 @@
+{% if site.integration and site.integration.analytics and site.integration.analytics.provider %}
+{% include "__analytics_" + site.integration.analytics.provider + "__.html" %}
+{% endif %}
