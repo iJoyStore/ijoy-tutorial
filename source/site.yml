@@ -9,27 +9,27 @@ site:
   # root-path: /gitsite
   # set cdn prefix: self hosted
   cdn-path: /static
-  navigation:
-    - title: Java教程
-      uri: /books/java/index.html
-    - title: Python教程
-      uri: /books/python/index.html
-    - title: JavaScript教程
-      uri: /books/javascript/index.html
-    - title: SQL教程
-      uri: /books/sql/index.html
-    - title: 手写Spring
-      uri: /books/summerframework/index.html
-    - title: 手写Tomcat
-      uri: /books/jerrymouse/index.html
-    - title: 区块链教程
-      uri: /books/blockchain/index.html
-    - title: Git教程
-      uri: /books/git/index.html
-    - title: Makefile教程
-      uri: /books/makefile/index.html
-    - title: 博客
-      uri: /blogs/all/index.html
+  # navigation:
+  #   - title: Java教程
+  #     uri: /books/java/index.html
+  #   - title: Python教程
+  #     uri: /books/python/index.html
+  #   - title: JavaScript教程
+  #     uri: /books/javascript/index.html
+  #   - title: SQL教程
+  #     uri: /books/sql/index.html
+  #   - title: 手写Spring
+  #     uri: /books/summerframework/index.html
+  #   - title: 手写Tomcat
+  #     uri: /books/jerrymouse/index.html
+  #   - title: 区块链教程
+  #     uri: /books/blockchain/index.html
+  #   - title: Git教程
+  #     uri: /books/git/index.html
+  #   - title: Makefile教程
+  #     uri: /books/makefile/index.html
+  #   - title: 博客
+  #     uri: /blogs/all/index.html
   git:
     base-url: https://github.com/michaelliao/liaoxuefeng.com/blob/main/source
   contact:
@@ -57,13 +57,12 @@ site:
       provider: baidu
       id: "2efddd14a5f2b304677462d06fb4f964"
   footer: |
-          <div>
-            &copy;<a href="/">liaoxuefeng.com</a> 
-            - <a href="https://weibo.com/liaoxuefeng" target="_blank">微博</a>
-            - <a href="https://github.com/michaelliao/liaoxuefeng.com" target="_blank">GitHub</a>
-            - <a href="/pages/license/index.html" target="_blank">License</a>
-          </div>
-
+    <div>
+      &copy;<a href="/">liaoxuefeng.com</a> 
+      - <a href="https://weibo.com/liaoxuefeng" target="_blank">微博</a>
+      - <a href="https://github.com/michaelliao/liaoxuefeng.com" target="_blank">GitHub</a>
+      - <a href="/pages/license/index.html" target="_blank">License</a>
+    </div>
 
 build:
   # copy special files under root dir (ignore if not found):
@@ -71,5 +70,4 @@ build:
     - favicon.ico
     - robots.txt
     - ads.txt
-
 # you can add any items:
