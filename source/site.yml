@@ -1,7 +1,7 @@
 site:
-  title: 廖雪峰的官方网站
-  description: 廖雪峰的官方网站 (liaoxuefeng.com) 研究互联网产品和技术，提供原创中文精品教程
-  keywords: 廖雪峰, liaoxuefeng, git, gitsite, javascript, node, jquery, python, java, spring, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币
+  title: ijoy教程
+  description: 官方网站 (ijoy.store) 研究互联网产品和技术，提供原创中文精品教程
+  keywords: git, gitsite, javascript, node, jquery, python, java, spring, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币
   theme: default
   language: zh-CN
   # set the /<rootPath> pathname under which your site is served
@@ -34,8 +34,7 @@ site:
     base-url: https://github.com/michaelliao/liaoxuefeng.com/blob/main/source
   contact:
     name: Michael Liao
-    github: https://github.com/michaelliao/liaoxuefeng.com
-    twitter: https://twitter.com/liaoxuefeng
+    github: https://github.com/iJoyStore/ijoy-tutorial
   books:
     index-marker: true
   search:
@@ -58,9 +57,7 @@ site:
       id: "2efddd14a5f2b304677462d06fb4f964"
   footer: |
     <div>
-      &copy;<a href="/">liaoxuefeng.com</a> 
-      - <a href="https://weibo.com/liaoxuefeng" target="_blank">微博</a>
-      - <a href="https://github.com/michaelliao/liaoxuefeng.com" target="_blank">GitHub</a>
+      &copy;<a href="/">ijoy.store</a> 
       - <a href="/pages/license/index.html" target="_blank">License</a>
     </div>
 

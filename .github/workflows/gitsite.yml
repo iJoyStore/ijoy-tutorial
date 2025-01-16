@@ -2,7 +2,7 @@
 #
 # To get started with GitSite see: https://gitsite.org
 
-name: Deploy GitSite to Pages
+name: Deploy tutorial.ijoy.store to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -40,8 +40,7 @@ jobs:
         with:
           node-version: 20
       - name: Install GitSite
-        run:
-          npm install gitsite-cli -g
+        run: npm install gitsite-cli -g
       - name: Build with GitSite
         run:
           # set output dir to '_site' for pages jobs:
