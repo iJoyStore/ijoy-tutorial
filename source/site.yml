@@ -1,7 +1,7 @@
 site:
-  title: 廖雪峰的官方网站
-  description: 廖雪峰的官方网站 (liaoxuefeng.com) 研究互联网产品和技术，提供原创中文精品教程
-  keywords: 廖雪峰, liaoxuefeng, git, gitsite, javascript, node, jquery, python, java, spring, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币
+  title: ijoy.store教程站
+  description: 提供原创中文精品教程
+  keywords: git, gitsite, javascript, node, jquery, python, java, spring, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币
   theme: default
   language: zh-CN
   # set the /<rootPath> pathname under which your site is served
@@ -28,14 +28,14 @@ site:
       uri: /books/git/index.html
     - title: Makefile教程
       uri: /books/makefile/index.html
-    - title: 博客
-      uri: /blogs/all/index.html
+    # - title: 博客
+    #   uri: /blogs/all/index.html
   git:
-    base-url: https://github.com/michaelliao/liaoxuefeng.com/blob/main/source
+    base-url: https://github.com/iJoyStore/ijoy-tutorial/blob/main/source
   contact:
     name: Michael Liao
-    github: https://github.com/michaelliao/liaoxuefeng.com
-    twitter: https://twitter.com/liaoxuefeng
+    # github: https://github.com/michaelliao/liaoxuefeng.com
+    # twitter: https://twitter.com/liaoxuefeng
   books:
     index-marker: true
   search:
@@ -51,19 +51,16 @@ site:
     # code-font: Monaco
   integration:
     comment:
-      provider: oauth
-      url: https://api.liaoxuefeng.com
+      # provider: oauth
+      # url: https://api.liaoxuefeng.com
     analytics:
-      provider: baidu
-      id: "2efddd14a5f2b304677462d06fb4f964"
+      # provider: baidu
+      # id: "2efddd14a5f2b304677462d06fb4f964"
   footer: |
-          <div>
-            &copy;<a href="/">liaoxuefeng.com</a> 
-            - <a href="https://weibo.com/liaoxuefeng" target="_blank">微博</a>
-            - <a href="https://github.com/michaelliao/liaoxuefeng.com" target="_blank">GitHub</a>
-            - <a href="/pages/license/index.html" target="_blank">License</a>
-          </div>
-
+    <div>
+      &copy;<a href="/">ijoy.store</a> 
+      - <a href="/pages/license/index.html" target="_blank">License</a>
+    </div>
 
 build:
   # copy special files under root dir (ignore if not found):
@@ -71,5 +68,4 @@ build:
     - favicon.ico
     - robots.txt
     - ads.txt
-
 # you can add any items:

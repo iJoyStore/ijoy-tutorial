@@ -1,6 +1,6 @@
 # Workflow for building and deploying a GitSite repo to GitHub Pages
 
-name: Build liaoxuefeng.com
+name: Build and Deploy tutorial.ijoy.store
 
 on:
   # Runs on pushes targeting the default branch
@@ -24,14 +24,6 @@ jobs:
 
     runs-on: ubuntu-22.04
     steps:
-      - name: Setup Env
-        run: |
-          echo "RELEASE_AT=`echo ${{ github.event.head_commit.timestamp }} | sed 's/[:+]/-/g' | cut -c1-19`" >> "$GITHUB_ENV"
-          echo "SHORT_SHA=`echo ${{ github.sha }} | cut -c1-7`" >> "$GITHUB_ENV"
-      - name: Print Env
-        run: |
-          echo ${{ env.RELEASE_AT }}
-          echo ${{ env.SHORT_SHA }}
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -41,8 +33,7 @@ jobs:
         with:
           node-version: 20
       - name: Install GitSite
-        run:
-          npm install gitsite-cli -g
+        run: npm install gitsite-cli -g
       - name: Build with GitSite
         run:
           # set output dir to '_site' for pages jobs:
@@ -51,45 +42,6 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
-      - name: Zip Generated Site
-        run:
-          cd _site && zip -r ../site.zip * && cd ..
-      - name: Release Zip
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: site.zip
-          tag: ${{ env.RELEASE_AT }}
-          release_name: site-source.${{ env.RELEASE_AT }}
-          body: Site source code including HTML, styles, scripts, images, etc.
-          overwrite: true
-      - name: Sync To Aliyun
-        uses: michaelliao/sync-s3-compatible-action@v2
-        env:
-          SYNC_OPT_UNUSED: delete
-          SYNC_TYPE: aliyun
-          SYNC_REGION: cn-hangzhou
-          SYNC_BUCKET: ${{ secrets.OSS_BUCKET }}
-          SYNC_ACCESS_ID: ${{ secrets.OSS_ACCESS_ID }}
-          SYNC_ACCESS_SECRET: ${{ secrets.OSS_ACCESS_SECRET }}
-      - name: Sync To QCloud
-        uses: michaelliao/sync-s3-compatible-action@v2
-        env:
-          SYNC_OPT_UNUSED: delete
-          SYNC_TYPE: qcloud
-          SYNC_REGION: ap-shanghai
-          SYNC_BUCKET: ${{ secrets.COS_BUCKET }}
-          SYNC_ACCESS_ID: ${{ secrets.COS_ACCESS_ID }}
-          SYNC_ACCESS_SECRET: ${{ secrets.COS_ACCESS_SECRET }}
-      - name: Sync To Baidu Cloud
-        uses: michaelliao/sync-s3-compatible-action@v2
-        env:
-          SYNC_OPT_UNUSED: delete
-          SYNC_TYPE: baidu
-          SYNC_REGION: su
-          SYNC_BUCKET: ${{ secrets.BOS_BUCKET }}
-          SYNC_ACCESS_ID: ${{ secrets.BOS_ACCESS_ID }}
-          SYNC_ACCESS_SECRET: ${{ secrets.BOS_ACCESS_SECRET }}
 
   # Deployment job
   deploy:

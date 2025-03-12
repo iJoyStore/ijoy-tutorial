@@ -1,6 +1,9 @@
 # 首页
 
-<h4>廖雪峰的官方网站为您提供原创精品中文教程：</h4>
+<h5>
+    <a href="https://ijoy.store">iJoy.store</a>
+    为您提供的精品中文教程：
+</h5>
 
 <div class="home-book-list">
     <!-- java -->
@@ -131,11 +134,11 @@
     </div>
 </div>
 
-<h4>最新发表的博客文章：</h4>
+<!-- <h4>最新发表的博客文章：</h4> -->
 
-<div id="home-blog-list" class="home-blog-list"></div>
+<!-- <div id="home-blog-list" class="home-blog-list"></div> -->
 
-<script>
+<!-- <script>
     documentReady(async ()=>{
         const resp = await fetch('/blogs/all/index.json');
         let blogs = await resp.json();
@@ -153,4 +156,4 @@
         });
         document.getElementById('home-blog-list').innerHTML = items.join('');
     });
-</script>
+</script> -->
